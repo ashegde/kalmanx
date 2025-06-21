@@ -16,4 +16,4 @@ But this can be easily rectified. Second, the loss appears to be somewhat diffic
 I have included a notebook containing functionality for verifying the loss function gradients by comparing with finite differences.
 It appears that at small epsilon (<1e-3), non-negligible differences can manifest due to the numerics of the linear solve (and backprop through it).
 Due to these differences, the optimal KF as implemented may not always outperform the classical strategy of empirically estimating the Q and R covariance matrices.
-Oddly enough, in the example above, the optimal KF strategy picks Q and R in such a way that the estimated states don't blow up.
+Oddly enough, in the example above, the optimal KF strategy picks Q and R in such a way that avoids the blowup observed in the estimated/classical KF.
